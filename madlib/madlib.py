@@ -19,6 +19,17 @@ elif year_answer < 5000:
     year = 1182
 else:
     pass
+
+def calcNumOne(x, y):
+    num_one = x * y
+    return num_one
+
+def calcNumTwo(a, b):
+    num_two = a - b
+    return num_two
+
+number_1 = calcNumOne(first_year, second_year);
+number_2 = calcNumTwo(first_year, second_year);
     
 
 
