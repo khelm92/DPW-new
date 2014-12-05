@@ -1,7 +1,16 @@
 print "Answer the questions to unlock a magical and devious story"
 
-name = raw_input("What is your name?")
-gender = raw_input("Are you a boy or a girl?")
+name = raw_input("What is your name? ")
+gender = raw_input("Are you a boy or a girl? ")
+
+first_year = raw_input("Enter a number between 5000-10000 ")
+second_year = raw_input("Enter another number between 1-5 ")
+
+location = raw_input("What is your favorite place in the world? ")
+
+monster_1 = raw_input("What is a monster from your worst nightmare? ")
+monster_2 = raw_input("What is an adorable animal from your best dream? ")
+
 
 
 
