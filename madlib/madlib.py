@@ -11,7 +11,15 @@ location = raw_input("What is your favorite place in the world? ")
 monster_1 = raw_input("What is a monster from your worst nightmare? ")
 monster_2 = raw_input("What is an adorable animal from your best dream? ")
 
+year_answer = 1. * first_year / second_year
 
+if year_answer > 5000:
+    year = 3015
+elif year_answer < 5000:
+    year = 1182
+else:
+    pass
+    
 
 
 
