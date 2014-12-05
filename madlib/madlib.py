@@ -11,7 +11,7 @@ location = raw_input("What is your favorite place in the world? ")
 monster_1 = raw_input("What is a monster from your worst nightmare? ")
 monster_2 = raw_input("What is an adorable animal from your best dream? ")
 
-year_answer = 1. * first_year / second_year
+year_answer = 1. * int(first_year) / int(second_year)
 
 if year_answer > 5000:
     year = 3015
@@ -21,26 +21,21 @@ else:
     pass
 
 def calcNumOne(x, y):
-    num_one = x * y
+    num_one = int(x) * int(y)
     return num_one
 
 def calcNumTwo(a, b):
-    num_two = a - b
+    num_two = int(a) - int(b)
     return num_two
 
 number_1 = calcNumOne(first_year, second_year);
 number_2 = calcNumTwo(first_year, second_year);
     
-
-
-
-
-
-
-
-
 story = ''' When a young {gender} named Little {name} was in class one day, the teacher asked Little {name} "if there was anywhere in the world you could go at anytime, where would it be?"
-and Little {name} answered "Well I would go to {location} in {year}!", and instantly Little {name} was teleported there magically! Only to find out that the spell misfired, and the world was
-filled with horrible {monster_1} and terrible {monster_2}. Next, a genie showed up, and said "I will get you out of here, but you must slay {number_1} of {monster_1} and capture {number_2} of
-{monster_2}". So Little {name} set off on the arduous quest. Unbeknownst to Little {name}, the devious genie had his fingers cross behind his back. When Little {name} returned, the genie had
+and Little {name} answered "Well I would go to {location} in the year {year}!", and instantly Little {name} was teleported there magically! Only to find out that the spell misfired, and the world was
+filled with horrible {monster_1}s and terrible {monster_2}s. Next, a genie showed up, and said "I will get you out of here, but you must slay {number_1} {monster_1}s and capture {number_2}
+{monster_2}s". So Little {name} set off on the arduous quest. Unbeknownst to Little {name}, the devious genie had his fingers cross behind his back. When Little {name} returned, the genie had
 disappeared, and Little {name} was doomed to live in this magical world forever. '''
+
+story = story.format(**locals())
+print story
