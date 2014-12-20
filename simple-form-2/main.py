@@ -8,6 +8,7 @@ class MainHandler(webapp2.RequestHandler):
 <html>
     <head>
         <title>Simple Form Assignment</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>'''
     
@@ -40,6 +41,7 @@ class MainHandler(webapp2.RequestHandler):
         page_close = '''</form>
     </body>
 </html>'''
+
 
         if self.request.GET:
             name = self.request.GET['name']
