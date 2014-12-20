@@ -1,10 +1,10 @@
 #kasey helm; simple form assignment
 
-import webapp2
+import webapp2 #importing webapp from google app launcher
 
-class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        page_head = '''<!DOCTYPE HTML>
+class MainHandler(webapp2.RequestHandler): #defining the MainHandler Class
+    def get(self): #all HTML below, self explanatory I think :)
+        page_head = '''<!DOCTYPE HTML> 
 <html>
     <head>
         <title>Simple Form Assignment</title>
@@ -13,7 +13,7 @@ class MainHandler(webapp2.RequestHandler):
         <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
     </head>
     <body>'''
-    
+        #main body for the HTML
         page_body = '''<h1>Grocery Store Application</h1>
         <form method="GET" action="">
             <label><h3>Name:</h3> </label><input type="text" name="name"/>
@@ -39,14 +39,14 @@ class MainHandler(webapp2.RequestHandler):
                                          <input type="checkbox" name="location" value="clairemont">Clairemont
                                          <br>
             <input type="submit" value="Submit" id="submit" />'''
-            
+        #closer for the HTML 
         page_close = '''</form>
     </body>
 </html>'''
 
-
-        if self.request.GET:
-            name = self.request.GET['name']
+        #if else statement - if information is filled out, display results, if not then it displays the form again
+        if self.request.GET: #getting information from the HTML to post on the results page
+            name = self.request.GET['name'] #defining each object for when we 'write' the results to the page
             email = self.request.GET['email']
             age = self.request.GET['age']
             position = self.request.GET['position']
