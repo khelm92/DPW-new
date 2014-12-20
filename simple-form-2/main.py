@@ -9,25 +9,27 @@ class MainHandler(webapp2.RequestHandler):
     <head>
         <title>Simple Form Assignment</title>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
     </head>
     <body>'''
     
         page_body = '''<h1>Grocery Store Application</h1>
         <form method="GET" action="">
-            <label>Name: </label><input type="text" name="name"/>
+            <label><h3>Name:</h3> </label><input type="text" name="name"/>
             <br>
-            <label>Email: </label><input type="text" name="email"/>
+            <label><h3>Email:</h3> </label><input type="text" name="email"/>
             <br>
-            <label>Age: </label><input type="text" name="age"/>
+            <label><h3>Age:</h3> </label><input type="text" name="age"/>
             <br>
-            <label>Position: </label> <br>
+            <label><h3>Position:</h3> </label> <br>
                                       <input type="radio" name="position" value="cashier" checked>Cashier
                                       <br>
                                       <input type="radio" name="position" value="bagger" checked>Bagger
                                       <br>
                                       <input type="radio" name="position" value="stock clerk" checked>Stock Clerk
                                       <br>
-            <label>Location(s): </label> <br>
+            <label><h3>Location(s):</h3> </label> <br>
                                          <input type="checkbox" name="location" value="san diego">San Diego
                                          <br>
                                          <input type="checkbox" name="location" value="la jolla">La Jolla
@@ -36,7 +38,7 @@ class MainHandler(webapp2.RequestHandler):
                                          <br>
                                          <input type="checkbox" name="location" value="clairemont">Clairemont
                                          <br>
-            <input type="submit" value="Submit" />'''
+            <input type="submit" value="Submit" id="submit" />'''
             
         page_close = '''</form>
     </body>
@@ -49,7 +51,7 @@ class MainHandler(webapp2.RequestHandler):
             age = self.request.GET['age']
             position = self.request.GET['position']
             location = self.request.GET['location']
-            self.response.write(page_head + 'Name: ' + name + '<br>' + 'Email: ' + email + '<br>' + 'Age: ' + age + '<br>' + 'Position: ' + position + '<br>' + 'Location: ' + location + page_close)
+            self.response.write(page_head + '<h1>Application Results:</h3>' + '<br>' + '<h3>Name:</h3> ' + name + '<br>' + '<h3>Email:</h3> ' + email + '<br>' + '<h3>Age:</h3> ' + age + '<br>' + '<h3>Position:</h3> ' + position + '<br>' + '<h3>Location:</h3> ' + location + page_close)
         else:
             self.response.write(page_head + page_body + page_close)
         

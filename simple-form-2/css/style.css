@@ -1,3 +1,20 @@
 body{
-    background-color: green;
+    background-color: #F0EED1;
+    font-family: 'Roboto', sans-serif;
+    padding: 50px;
+}
+
+h1, h3{
+    font-family: 'Slabo 27px', serif;
+    color: #525038;
+}
+
+
+#submit{
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    font-size: medium;
+    background-color: #525038;
+    color: white;
 }
