@@ -13,7 +13,7 @@ class MainHandler(webapp2.RequestHandler):
     
         page_body = '''<h1>Grocery Store Application</h1>
         <form method="GET" action="">
-            <label>Name: </label><input type="text" name="user"/>
+            <label>Name: </label><input type="text" name="name"/>
             <br>
             <label>Email: </label><input type="text" name="email"/>
             <br>
@@ -42,12 +42,12 @@ class MainHandler(webapp2.RequestHandler):
 </html>'''
 
         if self.request.GET:
-            user = self.request.GET['user']
+            name = self.request.GET['name']
             email = self.request.GET['email']
             age = self.request.GET['age']
             position = self.request.GET['position']
             location = self.request.GET['location']
-            self.response.write(page_head + user + ' ' + email + ' ' + age + ' ' + position + ' ' + location + page_close)
+            self.response.write(page_head + 'Name: ' + name + '<br>' + 'Email: ' + email + '<br>' + 'Age: ' + age + '<br>' + 'Position: ' + position + '<br>' + 'Location: ' + location + page_close)
         else:
             self.response.write(page_head + page_body + page_close)
         
